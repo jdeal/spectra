@@ -7,6 +7,7 @@ Simple, flexible, asynchronous TDD/BDD framework for [node.js][http://nodejs.org
 The simplest spec module:
 
 ```js
+
 ```
 
 That's right, an empty module. An empty module is a failing test. So no excuses
