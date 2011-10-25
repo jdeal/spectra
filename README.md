@@ -11,7 +11,7 @@ The simplest spec module:
 ```
 
 That's right, an empty module. An empty module is a failing test. So no excuses
-for starting with a failing test!
+for starting with a failing test first!
 
 To do something useful, the simplest spec is:
 
