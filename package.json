@@ -1,0 +1,24 @@
+{
+  "author": "Justin Deal",
+  "name": "spectra",
+  "description": "Simple, flexible asynchronous testing framework balanced between BDD and TDD.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jdeal/spectra",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jdeal/spectra.git"
+  },
+  "main": "./lib/spectra",
+  "engines": {
+    "node": "~0.4.12"
+  },
+  "dependencies": {
+    "optimist" : ">=0.2.8",
+    "burrito" : ">=0.2.11",
+    "runforcover" : ">=0.0.1"
+  },
+  "devDependencies": {},
+  "bin": {
+    "spectra": "./bin/spectra"
+  }
+}
