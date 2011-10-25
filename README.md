@@ -23,8 +23,11 @@ module.exports = function (spec){
 ```
 
 Note that each spec function is passed a spec function/object, which it can
-treat as the assert object and also call when finished. If a map is passed to
-the spec object, it represents a nested spec:
+treat as the assert object and also call when finished. Because of the explicit
+callback, asynchronous functions can easily be tested, and setup work can be
+done ahead of test execution.
+
+If a map is passed to the spec object, it represents a nested spec:
 
 ```js
 module.exports = function (spec){
@@ -41,9 +44,20 @@ module.exports = function (spec){
 }
 ```
 
-A test module is just a regular module that exports a single function, like this:
+You can nest as many specs as you like. Because the specs are functions, it's
+easy to reference variables in outer specs.
+
+You can also define the outermost specs like this:
 
 ```js
-module.exports = function (spec){
+exports['first test'] = function (spec){
+  // test something
+}
+
+exports['second test'] = function (spec){
+  // test something else
 }
 ```
+
+But then you'll lose the ability to do asynchronous setup work for your
+outermost specs.
