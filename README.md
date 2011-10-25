@@ -61,3 +61,19 @@ exports['second test'] = function (spec){
 
 But then you'll lose the ability to do asynchronous setup work for your
 outermost specs.
+
+### Multiple callbacks
+
+If you have multiple callbacks, you can state that with a "when" assertion:
+
+```js
+module.exports = function (spec){
+  spec.when('sooner','later');
+  setTimeout(function(){
+    spec('sooner');
+  },1000);
+  setTimeout(function(){
+    spec('later');
+  },2000);
+};
+```
