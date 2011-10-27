@@ -1,6 +1,6 @@
 # Spectra
 
-Simple, flexible, asynchronous TDD/BDD framework for [node.js][http://nodejs.org].
+Simple, flexible, asynchronous TDD/BDD framework for [node.js](http://nodejs.org).
 
 ## Usage
 
